@@ -2,16 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     
-    <groupId>com.github.aznamier.keycloak.event.provider</groupId>
+    <groupId>be.thebeehive.keycloak.event</groupId>
     <artifactId>keycloak-to-rabbit</artifactId>
     <packaging>jar</packaging>
 	<version>3.0.2</version>
-    
-
 
     <name>Keycloak: Event Publisher to RabbitMQ</name>
     <properties>
-    	<keycloak.version>18.0.0</keycloak.version>
+    	<keycloak.version>21.0.1</keycloak.version>
     	<jar.finalName>${project.artifactId}-${project.version}</jar.finalName>
     </properties>
     
@@ -22,10 +20,7 @@
 	     <url>https://maven.pkg.github.com/aznamier/keycloak-event-listener-rabbitmq</url>
 	   </repository>
 	</distributionManagement>
-	
-	
-	
-	
+
     <dependencies>
         <dependency>
             <groupId>org.keycloak</groupId>
@@ -62,7 +57,7 @@
 		<dependency>
 		    <groupId>com.rabbitmq</groupId>
 		    <artifactId>amqp-client</artifactId>
-		    <version>5.14.2</version>
+		    <version>5.16.0</version>
 		</dependency>
         
     </dependencies>
@@ -100,14 +95,7 @@
 				  </execution>
 				</executions>
 			</plugin>
-			
-            <plugin>
-                <groupId>org.wildfly.plugins</groupId>
-                <artifactId>wildfly-maven-plugin</artifactId>
-                <configuration>
-                    <skip>false</skip>
-                </configuration>
-            </plugin>
+
         </plugins>
     </build>
 </project>
