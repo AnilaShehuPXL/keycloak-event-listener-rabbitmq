@@ -1,4 +1,4 @@
-package com.github.aznamier.keycloak.event.provider;
+package be.thebeehive.keycloak.event.provider.event;
 
 
 import java.util.Locale;
@@ -8,8 +8,6 @@ import org.keycloak.Config.Scope;
 import org.keycloak.events.Event;
 import org.keycloak.events.admin.AdminEvent;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import org.keycloak.util.JsonSerialization;
 
 

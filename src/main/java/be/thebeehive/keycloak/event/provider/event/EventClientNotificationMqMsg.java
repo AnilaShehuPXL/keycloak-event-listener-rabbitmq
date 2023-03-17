@@ -1,4 +1,4 @@
-package com.github.aznamier.keycloak.event.provider;
+package be.thebeehive.keycloak.event.provider.event;
 
 import java.io.Serializable;
 

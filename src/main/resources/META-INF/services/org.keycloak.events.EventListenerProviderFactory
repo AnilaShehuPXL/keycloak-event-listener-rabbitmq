@@ -1,1 +1,1 @@
-com.github.aznamier.keycloak.event.provider.RabbitMqEventListenerProviderFactory
+be.thebeehive.keycloak.event.provider.event.RabbitMqEventListenerProviderFactory

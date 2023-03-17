@@ -1,4 +1,4 @@
-package com.github.aznamier.keycloak.event.provider;
+package be.thebeehive.keycloak.event.provider.event;
 
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
@@ -79,8 +79,9 @@ public class RabbitMqEventListenerProvider implements EventListenerProvider {
 
 	private void publishNotification(String messageString, BasicProperties props, String routingKey) {
 		try {
+			//log.tracef("keycloak-to-rabbitmq SUCCESS sending message: %s%n", routingKey);
+			log.infof("keycloak-to-rabbitmq SUCCESS sending message: %s%n", routingKey);
 			channel.basicPublish(cfg.getExchange(), routingKey, props, messageString.getBytes(StandardCharsets.UTF_8));
-			log.tracef("keycloak-to-rabbitmq SUCCESS sending message: %s%n", routingKey);
 		} catch (Exception ex) {
 			log.errorf(ex, "keycloak-to-rabbitmq ERROR sending message: %s%n", routingKey);
 		}
